@@ -1,8 +1,10 @@
+/* eslint-disable import/extensions,import/no-unresolved */
 /*
  * FeaturePage
  *
  * List all the features
  */
+import config from 'config';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
@@ -31,9 +33,7 @@ export default class FeaturePage extends React.Component {
             content="Feature page of React.js Boilerplate application"
           />
         </Helmet>
-        <H1>
-          <FormattedMessage {...messages.header} />
-        </H1>
+        <H1>{config.projectName}</H1>
         <List>
           <ListItem>
             <ListItemTitle>
